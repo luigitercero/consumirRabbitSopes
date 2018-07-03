@@ -26,7 +26,7 @@ def insertarBd(datos):
     VALUES ( ?, ?, ?, ?, ?)
         """)
     session.execute(prepared.bind( listaDt[0], listaDt[1], listaDt[2], listaDt[3], listaDt[4]))
-    return 'nuevoUsuario'
+    return 3
 def accederUser(datos):
     pass
     cluster = Cluster(['127.0.0.1'])
@@ -64,7 +64,7 @@ def on_request(ch, method, props, body):
 
     val = str(body)
     response = accion(val)
-
+    print (response)
     ch.basic_publish(exchange='',
                      routing_key=props.reply_to,
                      properties=pika.BasicProperties(correlation_id = \
