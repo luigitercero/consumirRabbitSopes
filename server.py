@@ -17,6 +17,16 @@ channel = connection.channel()
 
 channel.queue_declare(queue='colaCassandra')
 
+def actualizarUser(datos):
+    pass
+    cluster = Cluster(['127.0.0.1'])
+    session = cluster.connect()
+    listaAc = datos.split(',')
+#    print(int(listaAc[0]))
+#    print("%d"%(int(listaAc[0])))
+    session.execute(SimpleStatement("UPDATE bduser.usuario2 SET contra = %s , nombre = %s, apellido = %s, fecha = %s WHERE nombre_usuario = %s"), (listaAc[1],listaAc[2],listaAc[3],listaAc[4],listaAc[0],));      
+    return "se actualizo"
+
 def insertarBd(datos):
     cluster = Cluster(['127.0.0.1'])
     session = cluster.connect()
