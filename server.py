@@ -72,6 +72,7 @@ def veruser(datos):
     cluster = Cluster(['127.0.0.1'])
     session = cluster.connect()
     listaDatos = datos.split(',')
+    print(listaDatos[0]+"esto envio el Kevin")
     rows = session.execute("SELECT * FROM bduser.usuario2")
     for row in rows:
 #        print row[0], row[1], row[2]
@@ -81,8 +82,8 @@ def veruser(datos):
 	passa2 = passa.encode("utf-8")
         if name == listaDatos[0]:
             pass
-		return row.nombre+","+row.apellido+","+row.contra
-	    return '-1'
+	    return row.nombre+","+row.apellido+","+row.contra
+	   
     return '-2'
    
  
