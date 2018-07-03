@@ -5,4 +5,6 @@ redis_entidades = redis.Redis(
     port=6379,
     password='fVj1HjMcLYXE',
     db=1)
-redis_entidades.incrby('puta', 1) 
+redis_entidades.rpush("kevinp",{'name': 'kevin','age':22})
+a=redis_entidades.lrange("kevinp", 0, -1)
+print(a)

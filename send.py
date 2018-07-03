@@ -8,7 +8,7 @@ parameters = pika.ConnectionParameters('35.229.58.120',
                                        '/',
                                        credentials)
 
-connection = pika.BlockingConnection(parameters)
+
 channel = connection.channel()
 
 
