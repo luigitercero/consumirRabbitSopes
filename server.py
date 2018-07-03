@@ -21,6 +21,12 @@ def insertarBd(datos):
     cluster = Cluster(['127.0.0.1'])
     session = cluster.connect()
     listaDt = datos.split(',')
+    
+    print(listaDt[0])
+    print(listaDt[1])
+    print(listaDt[2])
+    print(listaDt[3])
+    print(listaDt[4])
     prepared = session.prepare("""
     INSERT INTO bduser.usuario ( nombre_usuario, contra, nombre, apellido, fecha)
     VALUES ( ?, ?, ?, ?, ?)
