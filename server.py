@@ -60,6 +60,7 @@ def accion(body):
         pass
         return insertarBd(cuerpo[1])
     else:
+	if cuerpo[0]==''
         return accederUser(cuerpo[1])
 
 
