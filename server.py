@@ -60,9 +60,21 @@ def accion(body):
         pass
         return insertarBd(cuerpo[1])
     else:
-	if cuerpo[0]==''
-        return accederUser(cuerpo[1])
-
+        if cuerpo[0]=='login':
+            return accederUser(cuerpo[1])
+        else:
+            if cuerpo[0]=='getdatos':
+                return 
+            
+def mostrar():
+    pass
+    cluster = Cluster(['127.0.0.1'])
+    session = cluster.connect()
+    rows = session.execute("SELECT * FROM bduser.usuario2")
+    datosMostrar = ""
+    for row in rows:
+        datosMostrar = datosMostrar  +","+row.nombre_usuario.encode("utf-8") + "," + row.contra.encode("utf-8") + "," + row.nombre.encode("utf-8") + "," + row.apellido.encode("utf-8") +  "," + row.fecha.encode("utf-8") + " | "
+    return datosMostrar
 
 def on_request(ch, method, props, body):
     #n = int(body)
