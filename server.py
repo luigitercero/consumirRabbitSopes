@@ -28,10 +28,10 @@ def insertarBd(datos):
     print(listaDt[3])
     print(listaDt[4])
     prepared = session.prepare("""
-    INSERT INTO bduser.usuario ( nombre_usuario, contra, nombre, apellido, fecha)
+    INSERT INTO bduser.usuario2 ( nombre_usuario, contra, nombre, apellido, fecha)
     VALUES ( ?, ?, ?, ?, ?)
         """)
-    session.execute(prepared.bind( listaDt[0], listaDt[1], listaDt[2], listaDt[3], listaDt[4]))
+    session.execute(prepared.bind((listaDt[0], listaDt[1], listaDt[2], listaDt[3], listaDt[4])))
     return 3
 def accederUser(datos):
     pass
@@ -49,14 +49,14 @@ def accederUser(datos):
             pass
 	    if	passa == listaDatos[1]:
             	pass
-		return str(row.id_usuario)
+		return 1
 	    return '-1'
-    return '-1'
+    return '-2'
   
 def accion(body):
     cuerpo = str(body).split('#%')
     print(cuerpo[0])	
-    if cuerpo[0]=='crear':
+    if cuerpo[0]=='nuevo':
         pass
         return insertarBd(cuerpo[1])
     else:
