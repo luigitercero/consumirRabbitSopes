@@ -64,8 +64,28 @@ def accion(body):
             return accederUser(cuerpo[1])
         else:
             if cuerpo[0]=='getdatos':
-                return 
-            
+                return veruser(cuerpo[1])
+ 
+ 
+def veruser(datos):
+    pass
+    cluster = Cluster(['127.0.0.1'])
+    session = cluster.connect()
+    listaDatos = datos.split(',')
+    rows = session.execute("SELECT * FROM bduser.usuario2")
+    for row in rows:
+#        print row[0], row[1], row[2]
+	name = row.nombre_usuario
+	name2 = name.encode("utf-8")
+	passa = row.contra
+	passa2 = passa.encode("utf-8")
+        if name == listaDatos[0]:
+            pass
+		return row.nombre+","+row.apellido+","+row.contra
+	    return '-1'
+    return '-2'
+   
+ 
 def mostrar():
     pass
     cluster = Cluster(['127.0.0.1'])
