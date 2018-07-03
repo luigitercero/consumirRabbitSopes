@@ -49,7 +49,7 @@ def accederUser(datos):
   
 def accion(body):
     cuerpo = str(body).split('#%')
-    print(cuepo[0])	
+    print(cuerpo[0])	
     if cuerpo[0]=='crear':
         pass
         return insertarBd(cuerpo[1])
