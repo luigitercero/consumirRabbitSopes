@@ -75,7 +75,9 @@ def accion(body):
         else:
             if cuerpo[0]=='getdatos':
                 return veruser(cuerpo[1])
- 
+            else:
+                if cuerpo[0]=='update':
+                    return actualizarUser(cuerpo[1])
  
 def veruser(datos):
     pass
