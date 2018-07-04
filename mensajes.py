@@ -15,18 +15,18 @@ channel.queue_declare(queue='mensaje')
 
 def guardarDatos(mensaje):
     redis_entidades = redis.Redis(
-        host='35.239.110.78',
+        host='35.232.252.220',
         port=6379,
-        password='fVj1HjMcLYXE',
+        password='ipcc7EC4eQaW',
         db=1)
     redis_entidades.rpush('comentario3', mensaje)
     return 1
 
 def retornar():
     redis_entidades = redis.Redis(
-        host='35.239.110.78',
+        host='35.232.252.220',
         port=6379,
-        password='fVj1HjMcLYXE',
+        password='ipcc7EC4eQaW',
         db=1)
     a=redis_entidades.lrange("comentario3", 0, -1)
     return a;
