@@ -1,0 +1,263 @@
+blancer.txt
+
+luigi@DESKTOP-VB7FRT0 MINGW64 /c/xampp/apache/bin
+$ ./ab -c 10 -n  100 -g     f:/server11.tsv 35.229.32.168/
+This is ApacheBench, Version 2.3 <$Revision: 1807734 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 35.229.32.168 (be patient).....done
+
+
+Server Software:
+Server Hostname:        35.229.32.168
+Server Port:            80
+
+Document Path:          /
+Document Length:        180 bytes
+
+Concurrency Level:      10
+Time taken for tests:   8.078 seconds
+Complete requests:      100
+Failed requests:        50
+   (Connect: 0, Receive: 0, Length: 50, Exceptions: 0)
+Non-2xx responses:      100
+Total transferred:      42000 bytes
+HTML transferred:       9000 bytes
+Requests per second:    12.38 [#/sec] (mean)
+Time per request:       807.834 [ms] (mean)
+Time per request:       80.783 [ms] (mean, across all concurrent requests)
+Transfer rate:          5.08 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       47   79  27.6     64     172
+Processing:    65  670 217.2    642    1112
+Waiting:       60  447 245.4    422    1112
+Total:        127  749 229.8    722    1190
+
+Percentage of the requests served within a certain time (ms)
+  50%    722
+  66%    813
+  75%    938
+  80%    988
+  90%   1095
+  95%   1144
+  98%   1174
+  99%   1190
+ 100%   1190 (longest request)
+
+luigi@DESKTOP-VB7FRT0 MINGW64 /c/xampp/apache/bin
+$ ./ab -c 10 -n 1000 -g     f:/server12.tsv 35.229.32.168/
+This is ApacheBench, Version 2.3 <$Revision: 1807734 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 35.229.32.168 (be patient)
+Completed 100 requests
+Completed 200 requests
+Completed 300 requests
+Completed 400 requests
+Completed 500 requests
+Completed 600 requests
+Completed 700 requests
+Completed 800 requests
+Completed 900 requests
+Completed 1000 requests
+Finished 1000 requests
+
+
+Server Software:
+Server Hostname:        35.229.32.168
+Server Port:            80
+
+Document Path:          /
+Document Length:        180 bytes
+
+Concurrency Level:      10
+Time taken for tests:   69.036 seconds
+Complete requests:      1000
+Failed requests:        500
+   (Connect: 0, Receive: 0, Length: 500, Exceptions: 0)
+Non-2xx responses:      1000
+Total transferred:      420000 bytes
+HTML transferred:       90000 bytes
+Requests per second:    14.49 [#/sec] (mean)
+Time per request:       690.360 [ms] (mean)
+Time per request:       69.036 [ms] (mean, across all concurrent requests)
+Transfer rate:          5.94 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       44   69  29.5     63     453
+Processing:    63  618 196.0    548    2412
+Waiting:       47  414 206.2    417    1828
+Total:        123  687 212.7    610    2506
+
+Percentage of the requests served within a certain time (ms)
+  50%    610
+  66%    618
+  75%    655
+  80%    739
+  90%    917
+  95%   1063
+  98%   1246
+  99%   1755
+ 100%   2506 (longest request)
+
+luigi@DESKTOP-VB7FRT0 MINGW64 /c/xampp/apache/bin
+$ ./ab -c 10 -n 10 -k -g f:/server13.tsv  35.229.32.168/
+This is ApacheBench, Version 2.3 <$Revision: 1807734 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 35.229.32.168 (be patient).....done
+
+
+Server Software:        Payara
+Server Hostname:        35.229.32.168
+Server Port:            80
+
+Document Path:          /
+Document Length:        180 bytes
+
+Concurrency Level:      10
+Time taken for tests:   0.671 seconds
+Complete requests:      10
+Failed requests:        5
+   (Connect: 0, Receive: 0, Length: 5, Exceptions: 0)
+Non-2xx responses:      10
+Keep-Alive requests:    10
+Total transferred:      4250 bytes
+HTML transferred:       900 bytes
+Requests per second:    14.90 [#/sec] (mean)
+Time per request:       671.169 [ms] (mean)
+Time per request:       67.117 [ms] (mean, across all concurrent requests)
+Transfer rate:          6.18 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       47   61   5.4     63      67
+Processing:    58  280 173.2    297     548
+Waiting:       58  280 173.2    297     548
+Total:        121  340 173.3    360     608
+
+Percentage of the requests served within a certain time (ms)
+  50%    360
+  66%    422
+  75%    485
+  80%    548
+  90%    608
+  95%    608
+  98%    608
+  99%    608
+ 100%    608 (longest request)
+
+luigi@DESKTOP-VB7FRT0 MINGW64 /c/xampp/apache/bin
+$ ./ab -c 100 -n 100 -k -g f:/server15.tsv  35.229.32.168/
+This is ApacheBench, Version 2.3 <$Revision: 1807734 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 35.229.32.168 (be patient).....done
+
+
+Server Software:        Payara
+Server Hostname:        35.229.32.168
+Server Port:            80
+
+Document Path:          /
+Document Length:        180 bytes
+
+Concurrency Level:      100
+Time taken for tests:   6.006 seconds
+Complete requests:      100
+Failed requests:        49
+   (Connect: 0, Receive: 0, Length: 49, Exceptions: 0)
+Non-2xx responses:      100
+Keep-Alive requests:    100
+Total transferred:      42840 bytes
+HTML transferred:       9180 bytes
+Requests per second:    16.65 [#/sec] (mean)
+Time per request:       6005.929 [ms] (mean)
+Time per request:       60.059 [ms] (mean, across all concurrent requests)
+Transfer rate:          6.97 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       47   59   7.0     62      70
+Processing:    63 2954 1728.0   2988    5909
+Waiting:       63 2954 1728.0   2988    5909
+Total:        121 3013 1728.1   3034    5959
+
+Percentage of the requests served within a certain time (ms)
+  50%   3034
+  66%   3989
+  75%   4535
+  80%   4829
+  90%   5424
+  95%   5719
+  98%   5909
+  99%   5959
+ 100%   5959 (longest request)
+
+luigi@DESKTOP-VB7FRT0 MINGW64 /c/xampp/apache/bin
+$ ./ab -c 100 -n 1000 -k -g f:/server16.tsv  35.229.32.168/
+This is ApacheBench, Version 2.3 <$Revision: 1807734 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 35.229.32.168 (be patient)
+Completed 100 requests
+Completed 200 requests
+Completed 300 requests
+Completed 400 requests
+Completed 500 requests
+Completed 600 requests
+Completed 700 requests
+Completed 800 requests
+Completed 900 requests
+Completed 1000 requests
+Finished 1000 requests
+
+
+Server Software:
+Server Hostname:        35.229.32.168
+Server Port:            80
+
+Document Path:          /
+Document Length:        0 bytes
+
+Concurrency Level:      100
+Time taken for tests:   8.638 seconds
+Complete requests:      1000
+Failed requests:        500
+   (Connect: 0, Receive: 0, Length: 500, Exceptions: 0)
+Non-2xx responses:      1000
+Keep-Alive requests:    1000
+Total transferred:      425000 bytes
+HTML transferred:       90000 bytes
+Requests per second:    115.77 [#/sec] (mean)
+Time per request:       863.814 [ms] (mean)
+Time per request:       8.638 [ms] (mean, across all concurrent requests)
+Transfer rate:          48.05 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    7  23.0      0     172
+Processing:    63  460 1167.0    138    7053
+Waiting:       63  460 1167.0    138    7053
+Total:         63  467 1185.6    138    7100
+
+Percentage of the requests served within a certain time (ms)
+  50%    138
+  66%    142
+  75%    146
+  80%    150
+  90%    450
+  95%   3213
+  98%   5943
+  99%   6553
+ 100%   7100 (longest request)
+
+luigi@DESKTOP-VB7FRT0 MINGW64 /c/xampp/apache/bin
